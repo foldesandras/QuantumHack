@@ -46,7 +46,7 @@ dependencies {
 }
 
 loom {
-	accessWidenerPath = file("src/main/resources/wurst.accesswidener")
+	accessWidenerPath = file("src/main/resources/quantumhack.accesswidener")
 }
 
 processResources {
@@ -114,7 +114,7 @@ task github(dependsOn: moveDevLibs) {
 
 	doLast {
 		def github = GitHub.connectUsingOAuth(ENV.GITHUB_TOKEN as String)
-		def repository = github.getRepository("Wurst-Imperium/Wurst-MCX2")
+		def repository = github.getRepository("foldesandras/QuantumHack")
 		def ghVersion = version.substring(0, version.indexOf("-"))
 		def archivesName = project.base.archivesName.get() as String
 		

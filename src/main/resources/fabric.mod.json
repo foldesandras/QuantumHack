@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "wurst",
+  "id": "quantumhack",
   "version": "${version}",
-  "name": "Wurst Client",
-  "description": "Wurst Wurst Wurst!",
+  "name": "QuantumHack Client",
+  "description": "Quantum Quantum Quantum (Hack)!",
   "authors": [
     "Alexander01998"
   ],
@@ -13,17 +13,17 @@
     "sources": "https://www.wurstclient.net/wurst7sources/"
   },
   "license": "GPL-3.0-or-later",
-  "icon": "assets/wurst/icon.png",
+  "icon": "assets/quantumhack/icon.png",
   "environment": "client",
   "entrypoints": {
     "main": [
-      "net.wurstclient.WurstInitializer"
+      "net.quantumhackclient.QuantumHackInitializer"
     ]
   },
   "mixins": [
-    "wurst.mixins.json"
+    "quantumhack.mixins.json"
   ],
-  "accessWidener": "wurst.accesswidener",
+  "accessWidener": "quantumhack.accesswidener",
   "depends": {
     "fabricloader": ">=0.15.9",
     "fabric-api": ">=0.91.1",
