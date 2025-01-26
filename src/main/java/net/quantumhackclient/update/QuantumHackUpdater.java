@@ -62,9 +62,6 @@ public final class QuantumHackUpdater implements UpdateListener
 					&& release.getBoolean("prerelease"))
 					continue;
 				
-				if(!containsCompatibleAsset(release.getArray("assets")))
-					continue;
-				
 				String tagName = release.getString("tag_name");
 				latestVersion = new Version(tagName.substring(1));
 				break;
@@ -83,37 +80,12 @@ public final class QuantumHackUpdater implements UpdateListener
 			e.printStackTrace();
 		}
 		
-		String currentVersionEncoded = URLEncoder.encode(
-			"Wurst " + currentVersion + " MC" + QuantumHackClient.MC_VERSION,
-			StandardCharsets.UTF_8);
-		
-		String baseUrl = "https://www.wurstclient.net/download/";
-		String utmSource = "Wurst+Client";
-		String utmMedium = "WurstUpdater+chat+message";
-		
 		if(latestVersion == null || latestVersion.isInvalid())
 		{
-			String text = "An error occurred while checking for updates."
-				+ " Click \u00a7nhere\u00a7r to check manually.";
-			String url = baseUrl + "?utm_source=" + utmSource + "&utm_medium="
-				+ utmMedium + "&utm_content=" + currentVersionEncoded
-				+ "+error+checking+updates+chat+message";
-			showLink(text, url);
+			String text = "An error occurred while checking for updates.";
+			ChatUtils.error(text);
 			return;
 		}
-		
-		if(!outdated)
-			return;
-		
-		String text = "Wurst " + latestVersion
-			+ " is now available for Minecraft " + QuantumHackClient.MC_VERSION
-			+ ". \u00a7nUpdate now\u00a7r to benefit from new features and/or bugfixes!";
-		String utmContent = currentVersionEncoded + "+update+chat+message";
-		
-		String url = baseUrl + "?utm_source=" + utmSource + "&utm_medium="
-			+ utmMedium + "&utm_content=" + utmContent;
-		
-		showLink(text, url);
 	}
 	
 	private void showLink(String text, String url)

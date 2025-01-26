@@ -46,13 +46,13 @@ public final class QuantumHackLogo
 		else
 			color = otf.getBackgroundColor();
 		
-		drawQuads(matrixStack, 0, 0, tr.getWidth(display) + 76, 11, color[0],
+		drawQuads(matrixStack, 0, 0, tr.getWidth(display) + 4, 11, color[0],
 			color[1], color[2], 0.5F);
 		
 		// draw version string
 		GL11.glEnable(GL11.GL_CULL_FACE);
 		GL11.glDisable(GL11.GL_DEPTH_TEST);
-		context.drawText(tr, display, 0, 2, otf.getTextColor(), false);
+		context.drawText(tr, display, 2, 2, otf.getTextColor(), false);
 		
 		// draw Wurst logo
 		/*
