@@ -7,9 +7,6 @@
  */
 package net.quantumhackclient.update;
 
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-
 import net.minecraft.text.ClickEvent;
 import net.minecraft.text.Text;
 import net.quantumhackclient.QuantumHackClient;

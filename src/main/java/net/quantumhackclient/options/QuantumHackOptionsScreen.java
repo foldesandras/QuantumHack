@@ -119,10 +119,10 @@ public class QuantumHackOptionsScreen extends Screen
 		new QuantumHackOptionsButton(54, 24, () -> "Github",
 			"§n§lgithub.com/foldesandras/QuantumHack",
 			b -> os.open("https://github.com/foldesandras/QuantumHack"));
-
+		
 		new QuantumHackOptionsButton(54, 48, () -> "Official Website",
-				"§n§lfoldesandras.github.io/QuantumHack",
-				b -> os.open("https://foldesandras.github.io/QuantumHack"));
+			"§n§lfoldesandras.github.io/QuantumHack",
+			b -> os.open("https://foldesandras.github.io/QuantumHack"));
 	}
 	
 	@Override
