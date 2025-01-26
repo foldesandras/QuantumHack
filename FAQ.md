@@ -1,4 +1,4 @@
-# Frequently Asked Questions (FAQ) for QuantumClient
+# Frequently Asked Questions (FAQ) for QuantumHack
 
 ## What is QuantumClient?
 
@@ -10,7 +10,7 @@ Yes, QuantumClient is completely free to use.
 
 ## How do I install QuantumClient?
 
-1. Download the [QuantumClient-fabric-1.20.1.jar](https://github.com/foldesandras/QuantumHack/relesaes) file from the official website or repository.
+1. Download the [QuantumClient-fabric-1.20.1.jar](https://github.com/foldesandras/QuantumHack/releases) file from the official website or repository.
 2. Place the `.jar` file into the `mods` folder of your Fabric setup.
 3. Ensure you have the Fabric Modloader and Fabric API installed.
 4. Launch Minecraft and select the Fabric profile.
