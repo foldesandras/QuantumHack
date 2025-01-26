@@ -46,7 +46,7 @@ import net.quantumhackclient.other_feature.OtfList;
 import net.quantumhackclient.other_feature.OtherFeature;
 import net.quantumhackclient.settings.SettingsFile;
 import net.quantumhackclient.update.ProblematicResourcePackDetector;
-import net.quantumhackclient.update.WurstUpdater;
+import net.quantumhackclient.update.QuantumHackUpdater;
 import net.quantumhackclient.util.json.JsonException;
 
 public enum QuantumHackClient
@@ -78,7 +78,7 @@ public enum QuantumHackClient
 	
 	private boolean enabled = true;
 	private static boolean guiInitialized;
-	private WurstUpdater updater;
+	private QuantumHackUpdater updater;
 	private ProblematicResourcePackDetector problematicPackDetector;
 	private Path wurstFolder;
 	
@@ -139,7 +139,7 @@ public enum QuantumHackClient
 		eventManager.add(PreMotionListener.class, rotationFaker);
 		eventManager.add(PostMotionListener.class, rotationFaker);
 		
-		updater = new WurstUpdater();
+		updater = new QuantumHackUpdater();
 		eventManager.add(UpdateListener.class, updater);
 		
 		problematicPackDetector = new ProblematicResourcePackDetector();
@@ -327,7 +327,7 @@ public enum QuantumHackClient
 		}
 	}
 	
-	public WurstUpdater getUpdater()
+	public QuantumHackUpdater getUpdater()
 	{
 		return updater;
 	}

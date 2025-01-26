@@ -20,7 +20,7 @@ import net.quantumhackclient.util.json.JsonUtils;
 import net.quantumhackclient.util.json.WsonArray;
 import net.quantumhackclient.util.json.WsonObject;
 
-public final class WurstUpdater implements UpdateListener
+public final class QuantumHackUpdater implements UpdateListener
 {
 	private Thread thread;
 	private boolean outdated;
@@ -31,7 +31,7 @@ public final class WurstUpdater implements UpdateListener
 	{
 		if(thread == null)
 		{
-			thread = new Thread(this::checkForUpdates, "WurstUpdater");
+			thread = new Thread(this::checkForUpdates, "QuantumHackUpdater");
 			thread.start();
 			return;
 		}
@@ -54,7 +54,7 @@ public final class WurstUpdater implements UpdateListener
 		try
 		{
 			WsonArray wson = JsonUtils.parseURLToArray(
-				"https://api.github.com/repos/Wurst-Imperium/Wurst-MCX2/releases");
+				"https://api.github.com/repos/foldesandras/QuantumHack/releases");
 			
 			for(WsonObject release : wson.getAllObjects())
 			{
