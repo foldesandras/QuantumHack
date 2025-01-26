@@ -22,7 +22,8 @@ public class FakePlayerEntity extends OtherClientPlayerEntity
 	
 	public FakePlayerEntity()
 	{
-		super(QuantumHackClient.MC.world, QuantumHackClient.MC.player.getGameProfile());
+		super(QuantumHackClient.MC.world,
+			QuantumHackClient.MC.player.getGameProfile());
 		copyPositionAndRotation(player);
 		
 		copyInventory();

@@ -25,8 +25,9 @@ import net.quantumhackclient.QuantumHackClient;
 public abstract class ControlsListWidgetMixin
 	extends ElementListWidget<ControlsListWidget.Entry>
 {
-	public ControlsListWidgetMixin(QuantumHackClient wurst, MinecraftClient client,
-                                   int width, int height, int top, int bottom, int itemHeight)
+	public ControlsListWidgetMixin(QuantumHackClient wurst,
+		MinecraftClient client, int width, int height, int top, int bottom,
+		int itemHeight)
 	{
 		super(client, width, height, top, bottom, itemHeight);
 	}

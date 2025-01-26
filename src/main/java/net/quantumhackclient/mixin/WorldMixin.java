@@ -33,7 +33,8 @@ public abstract class WorldMixin implements WorldAccess, AutoCloseable
 	@Override
 	public float getSkyAngle(float tickDelta)
 	{
-		NoWeatherHack noWeather = QuantumHackClient.INSTANCE.getHax().noWeatherHack;
+		NoWeatherHack noWeather =
+			QuantumHackClient.INSTANCE.getHax().noWeatherHack;
 		
 		long timeOfDay = noWeather.isTimeChanged() ? noWeather.getChangedTime()
 			: getLevelProperties().getTimeOfDay();
@@ -44,7 +45,8 @@ public abstract class WorldMixin implements WorldAccess, AutoCloseable
 	@Override
 	public int getMoonPhase()
 	{
-		NoWeatherHack noWeather = QuantumHackClient.INSTANCE.getHax().noWeatherHack;
+		NoWeatherHack noWeather =
+			QuantumHackClient.INSTANCE.getHax().noWeatherHack;
 		
 		if(noWeather.isMoonPhaseChanged())
 			return noWeather.getChangedMoonPhase();

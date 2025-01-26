@@ -38,8 +38,8 @@ import net.quantumhackclient.hacks.HandNoClipHack;
 public abstract class AbstractBlockStateMixin extends State<Block, BlockState>
 {
 	private AbstractBlockStateMixin(QuantumHackClient wurst, Block object,
-                                    ImmutableMap<Property<?>, Comparable<?>> immutableMap,
-                                    MapCodec<BlockState> mapCodec)
+		ImmutableMap<Property<?>, Comparable<?>> immutableMap,
+		MapCodec<BlockState> mapCodec)
 	{
 		super(object, immutableMap, mapCodec);
 	}

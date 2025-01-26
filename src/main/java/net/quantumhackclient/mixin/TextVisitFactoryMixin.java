@@ -24,6 +24,7 @@ public abstract class TextVisitFactoryMixin
 		index = 0)
 	private static String adjustText(String text)
 	{
-		return QuantumHackClient.INSTANCE.getHax().nameProtectHack.protect(text);
+		return QuantumHackClient.INSTANCE.getHax().nameProtectHack
+			.protect(text);
 	}
 }

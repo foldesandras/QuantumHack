@@ -68,7 +68,8 @@ public class Window
 	public final int getX()
 	{
 		// prevent window from going off the right side of the screen
-		net.minecraft.client.util.Window mcWindow = QuantumHackClient.MC.getWindow();
+		net.minecraft.client.util.Window mcWindow =
+			QuantumHackClient.MC.getWindow();
 		if(x > mcWindow.getScaledWidth() - 1)
 			return mcWindow.getScaledWidth() - 1;
 		
@@ -100,7 +101,8 @@ public class Window
 	public final int getY()
 	{
 		// prevent window from going off the bottom of the screen
-		net.minecraft.client.util.Window mcWindow = QuantumHackClient.MC.getWindow();
+		net.minecraft.client.util.Window mcWindow =
+			QuantumHackClient.MC.getWindow();
 		if(y > mcWindow.getScaledHeight() - 1)
 			return mcWindow.getScaledHeight() - 1;
 		

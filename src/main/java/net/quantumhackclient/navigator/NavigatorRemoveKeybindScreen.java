@@ -85,7 +85,8 @@ public class NavigatorRemoveKeybindScreen extends NavigatorScreen
 		{
 			String newCommands = String.join("\u00a7", commandsList)
 				.replace(";", "\u00a7\u00a7").replace("\u00a7", ";");
-			QuantumHackClient.INSTANCE.getKeybinds().add(selectedKey, newCommands);
+			QuantumHackClient.INSTANCE.getKeybinds().add(selectedKey,
+				newCommands);
 		}
 		
 		QuantumHackClient.INSTANCE.getNavigator()

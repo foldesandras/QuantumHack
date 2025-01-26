@@ -115,10 +115,10 @@ public class QuantumHackOptionsScreen extends Screen
 	private void addLinkButtons()
 	{
 		OperatingSystem os = Util.getOperatingSystem();
-
+		
 		new QuantumHackOptionsButton(54, 24, () -> "Github",
-				"§n§lgithub.com/foldesandras/QuantumHack", b -> os.open(
-				"https://github.com/foldesandras/QuantumHack"));
+			"§n§lgithub.com/foldesandras/QuantumHack",
+			b -> os.open("https://github.com/foldesandras/QuantumHack"));
 	}
 	
 	@Override
@@ -160,10 +160,12 @@ public class QuantumHackOptionsScreen extends Screen
 	{
 		for(ClickableWidget button : Screens.getButtons(this))
 		{
-			if(!button.isSelected() || !(button instanceof QuantumHackOptionsButton))
+			if(!button.isSelected()
+				|| !(button instanceof QuantumHackOptionsButton))
 				continue;
 			
-			QuantumHackOptionsButton woButton = (QuantumHackOptionsButton)button;
+			QuantumHackOptionsButton woButton =
+				(QuantumHackOptionsButton)button;
 			
 			if(woButton.tooltip.isEmpty())
 				continue;
@@ -179,12 +181,12 @@ public class QuantumHackOptionsScreen extends Screen
 		private final List<Text> tooltip;
 		
 		public QuantumHackOptionsButton(int xOffset, int yOffset,
-										Supplier<String> messageSupplier, String tooltip,
-										PressAction pressAction)
+			Supplier<String> messageSupplier, String tooltip,
+			PressAction pressAction)
 		{
 			super(QuantumHackOptionsScreen.this.width / 2 + xOffset,
-				QuantumHackOptionsScreen.this.height / 4 - 16 + yOffset, 100, 20,
-				Text.literal(messageSupplier.get()), pressAction,
+				QuantumHackOptionsScreen.this.height / 4 - 16 + yOffset, 100,
+				20, Text.literal(messageSupplier.get()), pressAction,
 				ButtonWidget.DEFAULT_NARRATION_SUPPLIER);
 			
 			this.messageSupplier = messageSupplier;

@@ -43,7 +43,8 @@ public final class HelpCmd extends Command
 	
 	private void listCommands(int page) throws CmdException
 	{
-		ArrayList<Command> cmds = new ArrayList<>(QUANTUM_HACK.getCmds().getAllCmds());
+		ArrayList<Command> cmds =
+			new ArrayList<>(QUANTUM_HACK.getCmds().getAllCmds());
 		int pages = (int)Math.ceil(cmds.size() / (double)CMDS_PER_PAGE);
 		pages = Math.max(pages, 1);
 		

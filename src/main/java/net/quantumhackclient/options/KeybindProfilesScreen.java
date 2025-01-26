@@ -66,8 +66,8 @@ public final class KeybindProfilesScreen extends Screen
 	
 	private void openFolder()
 	{
-		Util.getOperatingSystem().open(
-			QuantumHackClient.INSTANCE.getKeybinds().getProfilesFolder().toFile());
+		Util.getOperatingSystem().open(QuantumHackClient.INSTANCE.getKeybinds()
+			.getProfilesFolder().toFile());
 	}
 	
 	private void newProfile(String name)

@@ -269,7 +269,8 @@ public final class TooManyHaxCmd extends Command
 		if(args.length > 2)
 			throw new CmdSyntaxError();
 		
-		ArrayList<Path> files = QUANTUM_HACK.getHax().tooManyHaxHack.listProfiles();
+		ArrayList<Path> files =
+			QUANTUM_HACK.getHax().tooManyHaxHack.listProfiles();
 		int page = parsePage(args);
 		int pages = (int)Math.ceil(files.size() / 8.0);
 		pages = Math.max(pages, 1);

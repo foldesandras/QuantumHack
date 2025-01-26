@@ -25,13 +25,15 @@ import net.quantumhackclient.other_features.HackListOtf.Position;
 public final class HackListHUD implements UpdateListener
 {
 	private final ArrayList<HackListEntry> activeHax = new ArrayList<>();
-	private final HackListOtf otf = QuantumHackClient.INSTANCE.getOtfs().hackListOtf;
+	private final HackListOtf otf =
+		QuantumHackClient.INSTANCE.getOtfs().hackListOtf;
 	private int posY;
 	private int textColor;
 	
 	public HackListHUD()
 	{
-		QuantumHackClient.INSTANCE.getEventManager().add(UpdateListener.class, this);
+		QuantumHackClient.INSTANCE.getEventManager().add(UpdateListener.class,
+			this);
 	}
 	
 	public void render(DrawContext context, float partialTicks)

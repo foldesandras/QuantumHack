@@ -76,7 +76,8 @@ public final class KeybindEditorScreen extends Screen
 		if(oldKey != null)
 			QuantumHackClient.INSTANCE.getKeybinds().remove(oldKey);
 		
-		QuantumHackClient.INSTANCE.getKeybinds().add(key, commandField.getText());
+		QuantumHackClient.INSTANCE.getKeybinds().add(key,
+			commandField.getText());
 		client.setScreen(prevScreen);
 	}
 	

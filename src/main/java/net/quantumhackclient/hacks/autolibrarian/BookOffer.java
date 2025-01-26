@@ -31,14 +31,16 @@ public record BookOffer(String id, int level, int price)
 	
 	public String getEnchantmentName()
 	{
-		QuantumHackTranslator translator = QuantumHackClient.INSTANCE.getTranslator();
+		QuantumHackTranslator translator =
+			QuantumHackClient.INSTANCE.getTranslator();
 		Enchantment enchantment = getEnchantment();
 		return translator.translateMcEnglish(enchantment.getTranslationKey());
 	}
 	
 	public String getEnchantmentNameWithLevel()
 	{
-		QuantumHackTranslator translator = QuantumHackClient.INSTANCE.getTranslator();
+		QuantumHackTranslator translator =
+			QuantumHackClient.INSTANCE.getTranslator();
 		Enchantment enchantment = getEnchantment();
 		String name =
 			translator.translateMcEnglish(enchantment.getTranslationKey());

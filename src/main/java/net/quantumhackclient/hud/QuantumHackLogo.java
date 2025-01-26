@@ -20,7 +20,6 @@ import net.minecraft.client.render.Tessellator;
 import net.minecraft.client.render.VertexFormat;
 import net.minecraft.client.render.VertexFormats;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.Identifier;
 import net.quantumhackclient.QuantumHackClient;
 import net.quantumhackclient.other_features.QuantumHackLogoOtf;
 
@@ -29,7 +28,8 @@ public final class QuantumHackLogo
 	public void render(DrawContext context)
 	{
 		MatrixStack matrixStack = context.getMatrices();
-		QuantumHackLogoOtf otf = QuantumHackClient.INSTANCE.getOtfs().wurstLogoOtf;
+		QuantumHackLogoOtf otf =
+			QuantumHackClient.INSTANCE.getOtfs().wurstLogoOtf;
 		if(!otf.isVisible())
 			return;
 		
@@ -56,9 +56,10 @@ public final class QuantumHackLogo
 		
 		// draw Wurst logo
 		/*
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		GL11.glEnable(GL11.GL_BLEND);
-		context.drawTexture(texture, 0, 3, 0, 0, 72, 18, 72, 18);*/
+		 * RenderSystem.setShaderColor(1, 1, 1, 1);
+		 * GL11.glEnable(GL11.GL_BLEND);
+		 * context.drawTexture(texture, 0, 3, 0, 0, 72, 18, 72, 18);
+		 */
 	}
 	
 	private String getVersionString()

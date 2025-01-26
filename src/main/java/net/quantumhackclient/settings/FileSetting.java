@@ -40,7 +40,8 @@ public final class FileSetting extends Setting
 		Consumer<Path> createDefaultFiles)
 	{
 		super(name, description);
-		folder = QuantumHackClient.INSTANCE.getWurstFolder().resolve(folderName);
+		folder =
+			QuantumHackClient.INSTANCE.getWurstFolder().resolve(folderName);
 		this.createDefaultFiles = createDefaultFiles;
 		setSelectedFileToDefault();
 	}

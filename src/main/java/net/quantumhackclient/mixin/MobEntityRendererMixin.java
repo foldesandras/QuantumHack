@@ -32,7 +32,8 @@ public abstract class MobEntityRendererMixin
 	private void onHasLabel(CallbackInfoReturnable<Boolean> cir)
 	{
 		// skip the mobEntity == dispatcher.targetedEntity check and return true
-		if(QuantumHackClient.INSTANCE.getHax().nameTagsHack.shouldForceMobNametags())
+		if(QuantumHackClient.INSTANCE.getHax().nameTagsHack
+			.shouldForceMobNametags())
 			cir.setReturnValue(true);
 	}
 }

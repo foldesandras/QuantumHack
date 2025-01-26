@@ -438,8 +438,8 @@ public final class TunnellerHack extends Hack
 				return;
 			}
 			
-			QUANTUM_HACK.getHax().autoToolHack.equipBestTool(currentBlock, false, true,
-				0);
+			QUANTUM_HACK.getHax().autoToolHack.equipBestTool(currentBlock,
+				false, true, 0);
 			breakBlock(currentBlock);
 			
 			if(MC.player.getAbilities().creativeMode
@@ -553,7 +553,8 @@ public final class TunnellerHack extends Hack
 				placeBlockSimple(pos);
 			else
 			{
-				QUANTUM_HACK.getHax().autoToolHack.equipBestTool(pos, false, true, 0);
+				QUANTUM_HACK.getHax().autoToolHack.equipBestTool(pos, false,
+					true, 0);
 				breakBlock(pos);
 			}
 		}
@@ -693,7 +694,8 @@ public final class TunnellerHack extends Hack
 			}
 			
 			BlockPos pos3 = start.offset(direction, length + 1);
-			QUANTUM_HACK.getRotationFaker().faceVectorClientIgnorePitch(toVec3d(pos3));
+			QUANTUM_HACK.getRotationFaker()
+				.faceVectorClientIgnorePitch(toVec3d(pos3));
 			forward.setPressed(false);
 			MC.player.setSprinting(false);
 			
@@ -942,7 +944,8 @@ public final class TunnellerHack extends Hack
 		}
 		
 		// face block
-		QUANTUM_HACK.getRotationFaker().faceVectorPacket(hitVecs[side.ordinal()]);
+		QUANTUM_HACK.getRotationFaker()
+			.faceVectorPacket(hitVecs[side.ordinal()]);
 		
 		// damage block
 		if(!MC.interactionManager.updateBlockBreakingProgress(pos, side))

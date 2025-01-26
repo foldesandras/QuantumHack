@@ -43,7 +43,8 @@ public final class WikiDataExportOtf extends OtherFeature
 	{
 		try
 		{
-			Path exportFile = QUANTUM_HACK.getWurstFolder().resolve("wiki-data.json");
+			Path exportFile =
+				QUANTUM_HACK.getWurstFolder().resolve("wiki-data.json");
 			
 			JsonObject json = new JsonObject();
 			for(Hack hack : QUANTUM_HACK.getHax().getAllHax())

@@ -186,7 +186,8 @@ public final class HackList implements UpdateListener
 	public final TunnellerHack tunnellerHack = new TunnellerHack();
 	public final VeinMinerHack veinMinerHack = new VeinMinerHack();
 	public final XRayHack xRayHack = new XRayHack();
-	public final InstaKillSwordHack instaKillSwordHack = new InstaKillSwordHack();
+	public final InstaKillSwordHack instaKillSwordHack =
+		new InstaKillSwordHack();
 	
 	private final TreeMap<String, Hack> hax =
 		new TreeMap<>(String::compareToIgnoreCase);

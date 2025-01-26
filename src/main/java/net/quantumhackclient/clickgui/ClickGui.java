@@ -47,9 +47,9 @@ import net.quantumhackclient.util.json.JsonUtils;
 
 public final class ClickGui
 {
-	private static final QuantumHackClient QUANTUM_HACK_CLIENT = QuantumHackClient.INSTANCE;
+	private static final QuantumHackClient QUANTUM_HACK_CLIENT =
+		QuantumHackClient.INSTANCE;
 	private static final MinecraftClient MC = QuantumHackClient.MC;
-	
 	private final ArrayList<Window> windows = new ArrayList<>();
 	private final ArrayList<Popup> popups = new ArrayList<>();
 	private final Path windowsFile;
@@ -91,9 +91,12 @@ public final class ClickGui
 		windows.addAll(windowMap.values());
 		
 		Window uiSettings = new Window("UI Settings");
-		uiSettings.add(new FeatureButton(QUANTUM_HACK_CLIENT.getOtfs().wurstLogoOtf));
-		uiSettings.add(new FeatureButton(QUANTUM_HACK_CLIENT.getOtfs().hackListOtf));
-		uiSettings.add(new FeatureButton(QUANTUM_HACK_CLIENT.getOtfs().keybindManagerOtf));
+		uiSettings
+			.add(new FeatureButton(QUANTUM_HACK_CLIENT.getOtfs().wurstLogoOtf));
+		uiSettings
+			.add(new FeatureButton(QUANTUM_HACK_CLIENT.getOtfs().hackListOtf));
+		uiSettings.add(
+			new FeatureButton(QUANTUM_HACK_CLIENT.getOtfs().keybindManagerOtf));
 		ClickGuiHack clickGuiHack = QUANTUM_HACK_CLIENT.getHax().clickGuiHack;
 		Stream<Setting> settings = clickGuiHack.getSettings().values().stream();
 		settings.map(Setting::getComponent).forEach(c -> uiSettings.add(c));

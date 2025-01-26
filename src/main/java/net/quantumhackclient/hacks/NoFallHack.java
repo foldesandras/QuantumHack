@@ -72,8 +72,9 @@ public final class NoFallHack extends Hack implements UpdateListener
 			
 		// ignore small falls that can't cause damage,
 		// unless CreativeFlight is enabled in survival mode
-		boolean creativeFlying = QUANTUM_HACK.getHax().creativeFlightHack.isEnabled()
-			&& player.getAbilities().flying;
+		boolean creativeFlying =
+			QUANTUM_HACK.getHax().creativeFlightHack.isEnabled()
+				&& player.getAbilities().flying;
 		if(!creativeFlying && player.fallDistance <= (fallFlying ? 1 : 2))
 			return;
 		

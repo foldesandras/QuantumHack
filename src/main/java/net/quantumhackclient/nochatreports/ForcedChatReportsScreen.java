@@ -54,7 +54,8 @@ public final class ForcedChatReportsScreen extends Screen
 		reason = Text.literal(QuantumHackClient.INSTANCE
 			.translate("gui.wurst.nochatreports.unsafe_server.message"));
 		
-		NoChatReportsOtf ncr = QuantumHackClient.INSTANCE.getOtfs().noChatReportsOtf;
+		NoChatReportsOtf ncr =
+			QuantumHackClient.INSTANCE.getOtfs().noChatReportsOtf;
 		sigButtonMsg = () -> QuantumHackClient.INSTANCE
 			.translate("button.wurst.nochatreports.signatures_status")
 			+ blockedOrAllowed(ncr.isEnabled());

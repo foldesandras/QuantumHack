@@ -91,7 +91,8 @@ public enum RenderUtils
 	
 	public static Vec3d getCameraPos()
 	{
-		Camera camera = QuantumHackClient.MC.getBlockEntityRenderDispatcher().camera;
+		Camera camera =
+			QuantumHackClient.MC.getBlockEntityRenderDispatcher().camera;
 		if(camera == null)
 			return Vec3d.ZERO;
 		
@@ -100,7 +101,8 @@ public enum RenderUtils
 	
 	public static BlockPos getCameraBlockPos()
 	{
-		Camera camera = QuantumHackClient.MC.getBlockEntityRenderDispatcher().camera;
+		Camera camera =
+			QuantumHackClient.MC.getBlockEntityRenderDispatcher().camera;
 		if(camera == null)
 			return BlockPos.ORIGIN;
 		

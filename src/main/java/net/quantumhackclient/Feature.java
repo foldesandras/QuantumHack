@@ -22,7 +22,8 @@ import net.quantumhackclient.util.ChatUtils;
 
 public abstract class Feature
 {
-	protected static final QuantumHackClient QUANTUM_HACK = QuantumHackClient.INSTANCE;
+	protected static final QuantumHackClient QUANTUM_HACK =
+		QuantumHackClient.INSTANCE;
 	protected static final EventManager EVENTS = QUANTUM_HACK.getEventManager();
 	protected static final MinecraftClient MC = QuantumHackClient.MC;
 	protected static final IMinecraftClient IMC = QuantumHackClient.IMC;

@@ -166,8 +166,9 @@ public final class HackListOtf extends OtherFeature
 	{
 		NAME("Name", (a, b) -> a.getName().compareToIgnoreCase(b.getName())),
 		
-		WIDTH("Width", Comparator.comparingInt(
-			h -> QuantumHackClient.MC.textRenderer.getWidth(h.getRenderName())));
+		WIDTH("Width",
+			Comparator.comparingInt(h -> QuantumHackClient.MC.textRenderer
+				.getWidth(h.getRenderName())));
 		
 		private final String name;
 		private final Comparator<Hack> comparator;

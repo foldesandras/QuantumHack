@@ -42,8 +42,8 @@ public final class QuantumHackUpdater implements UpdateListener
 		if(component != null)
 			ChatUtils.component(component);
 		
-		QuantumHackClient.INSTANCE.getEventManager().remove(UpdateListener.class,
-			this);
+		QuantumHackClient.INSTANCE.getEventManager()
+			.remove(UpdateListener.class, this);
 	}
 	
 	public void checkForUpdates()

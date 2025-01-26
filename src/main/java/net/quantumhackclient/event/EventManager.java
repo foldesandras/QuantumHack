@@ -35,7 +35,8 @@ public final class EventManager
 	 */
 	public static <L extends Listener, E extends Event<L>> void fire(E event)
 	{
-		EventManager eventManager = QuantumHackClient.INSTANCE.getEventManager();
+		EventManager eventManager =
+			QuantumHackClient.INSTANCE.getEventManager();
 		if(eventManager == null)
 			return;
 		

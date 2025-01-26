@@ -76,16 +76,16 @@ public final class KeybindManagerScreen extends Screen
 	
 	private void edit()
 	{
-		Keybind keybind = QuantumHackClient.INSTANCE.getKeybinds().getAllKeybinds()
-			.get(listGui.selected);
+		Keybind keybind = QuantumHackClient.INSTANCE.getKeybinds()
+			.getAllKeybinds().get(listGui.selected);
 		client.setScreen(new KeybindEditorScreen(this, keybind.getKey(),
 			keybind.getCommands()));
 	}
 	
 	private void remove()
 	{
-		Keybind keybind1 = QuantumHackClient.INSTANCE.getKeybinds().getAllKeybinds()
-			.get(listGui.selected);
+		Keybind keybind1 = QuantumHackClient.INSTANCE.getKeybinds()
+			.getAllKeybinds().get(listGui.selected);
 		QuantumHackClient.INSTANCE.getKeybinds().remove(keybind1.getKey());
 	}
 	
@@ -202,7 +202,8 @@ public final class KeybindManagerScreen extends Screen
 		@Override
 		protected int getItemCount()
 		{
-			return QuantumHackClient.INSTANCE.getKeybinds().getAllKeybinds().size();
+			return QuantumHackClient.INSTANCE.getKeybinds().getAllKeybinds()
+				.size();
 		}
 		
 		@Override
@@ -225,8 +226,8 @@ public final class KeybindManagerScreen extends Screen
 		protected void renderItem(DrawContext context, int index, int x, int y,
 			int slotHeight, int mouseX, int mouseY, float partialTicks)
 		{
-			Keybind keybind =
-				QuantumHackClient.INSTANCE.getKeybinds().getAllKeybinds().get(index);
+			Keybind keybind = QuantumHackClient.INSTANCE.getKeybinds()
+				.getAllKeybinds().get(index);
 			
 			context.drawText(client.textRenderer,
 				"Key: " + keybind.getKey().replace("key.keyboard.", ""), x + 3,

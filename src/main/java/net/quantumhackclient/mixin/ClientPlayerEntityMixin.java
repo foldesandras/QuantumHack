@@ -55,7 +55,7 @@ public class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
 	private boolean hideNextItemUse;
 	
 	public ClientPlayerEntityMixin(QuantumHackClient wurst, ClientWorld world,
-                                   GameProfile profile)
+		GameProfile profile)
 	{
 		super(world, profile);
 	}
@@ -79,7 +79,8 @@ public class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
 	private boolean wrapHasForwardMovement(Input input,
 		Operation<Boolean> original)
 	{
-		if(QuantumHackClient.INSTANCE.getHax().autoSprintHack.shouldOmniSprint())
+		if(QuantumHackClient.INSTANCE.getHax().autoSprintHack
+			.shouldOmniSprint())
 			return input.getMovementInput().length() > 1e-5F;
 		
 		return original.call(input);
@@ -196,7 +197,8 @@ public class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
 	@Inject(at = @At("HEAD"), method = "canSprint()Z", cancellable = true)
 	private void onCanSprint(CallbackInfoReturnable<Boolean> cir)
 	{
-		if(QuantumHackClient.INSTANCE.getHax().autoSprintHack.shouldSprintHungry())
+		if(QuantumHackClient.INSTANCE.getHax().autoSprintHack
+			.shouldSprintHungry())
 			cir.setReturnValue(true);
 	}
 	

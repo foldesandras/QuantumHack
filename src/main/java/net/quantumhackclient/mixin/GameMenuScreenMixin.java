@@ -58,7 +58,8 @@ public abstract class GameMenuScreenMixin extends Screen
 	private void onRender(DrawContext context, int mouseX, int mouseY,
 		float partialTicks, CallbackInfo ci)
 	{
-		if(!QuantumHackClient.INSTANCE.isEnabled() || quantumHackOptionsButton == null)
+		if(!QuantumHackClient.INSTANCE.isEnabled()
+			|| quantumHackOptionsButton == null)
 			return;
 		
 		GL11.glEnable(GL11.GL_CULL_FACE);

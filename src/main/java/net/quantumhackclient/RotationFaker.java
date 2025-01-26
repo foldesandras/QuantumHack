@@ -86,6 +86,7 @@ public final class RotationFaker
 	
 	public float getServerPitch()
 	{
-		return fakeRotation ? serverPitch : QuantumHackClient.MC.player.getPitch();
+		return fakeRotation ? serverPitch
+			: QuantumHackClient.MC.player.getPitch();
 	}
 }

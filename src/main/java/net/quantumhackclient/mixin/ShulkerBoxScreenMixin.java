@@ -31,7 +31,7 @@ public abstract class ShulkerBoxScreenMixin
 	private int mode;
 	
 	private ShulkerBoxScreenMixin(QuantumHackClient wurst,
-                                  ShulkerBoxScreenHandler handler, PlayerInventory inventory, Text title)
+		ShulkerBoxScreenHandler handler, PlayerInventory inventory, Text title)
 	{
 		super(handler, inventory, title);
 	}

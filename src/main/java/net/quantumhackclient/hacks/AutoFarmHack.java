@@ -300,7 +300,8 @@ public final class AutoFarmHack extends Hack
 					continue;
 				
 				// face block
-				QUANTUM_HACK.getRotationFaker().faceVectorPacket(params.hitVec());
+				QUANTUM_HACK.getRotationFaker()
+					.faceVectorPacket(params.hitVec());
 				
 				// place seed
 				ActionResult result = MC.interactionManager

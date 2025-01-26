@@ -108,7 +108,8 @@ public class DisconnectedScreenMixin extends Screen
 	@Override
 	public void tick()
 	{
-		if(!QuantumHackClient.INSTANCE.isEnabled() || autoReconnectButton == null)
+		if(!QuantumHackClient.INSTANCE.isEnabled()
+			|| autoReconnectButton == null)
 			return;
 		
 		AutoReconnectHack autoReconnect =

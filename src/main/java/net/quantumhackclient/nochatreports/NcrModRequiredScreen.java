@@ -42,8 +42,9 @@ public final class NcrModRequiredScreen extends Screen
 	
 	public NcrModRequiredScreen(Screen prevScreen)
 	{
-		super(Text.literal(ChatUtils.QUANTUM_HACK_PREFIX + QuantumHackClient.INSTANCE
-			.translate("gui.wurst.nochatreports.ncr_mod_server.title")));
+		super(Text
+			.literal(ChatUtils.QUANTUM_HACK_PREFIX + QuantumHackClient.INSTANCE
+				.translate("gui.wurst.nochatreports.ncr_mod_server.title")));
 		this.prevScreen = prevScreen;
 		
 		reason = Text.literal(QuantumHackClient.INSTANCE
@@ -61,8 +62,8 @@ public final class NcrModRequiredScreen extends Screen
 	
 	private String onOrOff(boolean on)
 	{
-		return QuantumHackClient.INSTANCE.translate("options." + (on ? "on" : "off"))
-			.toUpperCase();
+		return QuantumHackClient.INSTANCE
+			.translate("options." + (on ? "on" : "off")).toUpperCase();
 	}
 	
 	private String blockedOrAllowed(boolean blocked)

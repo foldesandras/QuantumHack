@@ -59,7 +59,8 @@ public abstract class EntityRendererMixin<T extends Entity>
 	protected void wurstRenderLabelIfPresent(T entity, Text text,
 		MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light)
 	{
-		NameTagsHack nameTags = QuantumHackClient.INSTANCE.getHax().nameTagsHack;
+		NameTagsHack nameTags =
+			QuantumHackClient.INSTANCE.getHax().nameTagsHack;
 		
 		// disable distance limit if configured in NameTags
 		double distanceSq = dispatcher.getSquaredDistanceToCamera(entity);

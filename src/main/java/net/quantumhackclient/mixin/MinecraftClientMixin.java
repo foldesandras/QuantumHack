@@ -123,7 +123,8 @@ public abstract class MinecraftClientMixin
 		if(!(hitResult instanceof EntityHitResult eHitResult))
 			return;
 		
-		QuantumHackClient.INSTANCE.getFriends().middleClick(eHitResult.getEntity());
+		QuantumHackClient.INSTANCE.getFriends()
+			.middleClick(eHitResult.getEntity());
 	}
 	
 	/**

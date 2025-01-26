@@ -71,7 +71,8 @@ public final class AttackSpeedSliderSetting extends SliderSetting
 	public boolean isTimeToAttack()
 	{
 		double value = getValue();
-		if(value <= 0 && QuantumHackClient.MC.player.getAttackCooldownProgress(0) < 1)
+		if(value <= 0
+			&& QuantumHackClient.MC.player.getAttackCooldownProgress(0) < 1)
 			return false;
 		
 		return tickTimer <= 0;

@@ -25,8 +25,8 @@ public abstract class CreativeInventoryScreenMixin
 	extends AbstractInventoryScreen<CreativeScreenHandler>
 {
 	private CreativeInventoryScreenMixin(QuantumHackClient wurst,
-                                         CreativeScreenHandler screenHandler, PlayerInventory inventory,
-                                         Text title)
+		CreativeScreenHandler screenHandler, PlayerInventory inventory,
+		Text title)
 	{
 		super(screenHandler, inventory, title);
 	}

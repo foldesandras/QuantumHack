@@ -141,7 +141,8 @@ public class QuantumHackTranslator implements SynchronousResourceReloader
 	
 	public boolean isForcedEnglish()
 	{
-		return quantumHack.getOtfs().translationsOtf.getForceEnglish().isChecked();
+		return quantumHack.getOtfs().translationsOtf.getForceEnglish()
+			.isChecked();
 	}
 	
 	/**

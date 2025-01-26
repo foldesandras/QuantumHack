@@ -119,7 +119,8 @@ public final class NoChatReportsOtf extends OtherFeature
 			return indicator;
 		
 		return new MessageIndicator(0xE84F58, Icon.CHAT_MODIFIED,
-			Text.literal(ChatUtils.QUANTUM_HACK_PREFIX + "\u00a7cReportable\u00a7r - "
+			Text.literal(ChatUtils.QUANTUM_HACK_PREFIX
+				+ "\u00a7cReportable\u00a7r - "
 				+ QUANTUM_HACK.translate(
 					"description.wurst.nochatreports.message_is_reportable")),
 			"Reportable");
@@ -133,7 +134,8 @@ public final class NoChatReportsOtf extends OtherFeature
 	
 	public boolean isActive()
 	{
-		return isEnabled() && QUANTUM_HACK.isEnabled() && !MC.isInSingleplayer();
+		return isEnabled() && QUANTUM_HACK.isEnabled()
+			&& !MC.isInSingleplayer();
 	}
 	
 	@Override

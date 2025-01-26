@@ -55,8 +55,8 @@ public class NavigatorNewKeybindScreen extends NavigatorScreen
 				{
 					String newCommands = selectedCommand.getCommand();
 					
-					String oldCommands = QuantumHackClient.INSTANCE.getKeybinds()
-						.getCommands(selectedKey);
+					String oldCommands = QuantumHackClient.INSTANCE
+						.getKeybinds().getCommands(selectedKey);
 					if(oldCommands != null)
 						newCommands = oldCommands + " ; " + newCommands;
 					
@@ -132,8 +132,8 @@ public class NavigatorNewKeybindScreen extends NavigatorScreen
 			if(!selectedKey.equals("key.keyboard.unknown"))
 			{
 				text += "\n\nKey: " + selectedKey.replace("key.keyboard.", "");
-				String commands =
-					QuantumHackClient.INSTANCE.getKeybinds().getCommands(selectedKey);
+				String commands = QuantumHackClient.INSTANCE.getKeybinds()
+					.getCommands(selectedKey);
 				if(commands != null)
 				{
 					text +=

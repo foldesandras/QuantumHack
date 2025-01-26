@@ -33,7 +33,8 @@ public abstract class StatsScreenMixin extends Screen implements StatsListener
 	@Inject(at = @At("TAIL"), method = "createButtons()V")
 	private void onCreateButtons(CallbackInfo ci)
 	{
-		if(QuantumHackClient.INSTANCE.getOtfs().disableOtf.shouldHideEnableButton())
+		if(QuantumHackClient.INSTANCE.getOtfs().disableOtf
+			.shouldHideEnableButton())
 			return;
 		
 		ButtonWidget toggleWurstButton =
@@ -65,7 +66,8 @@ public abstract class StatsScreenMixin extends Screen implements StatsListener
 	private void updateWurstButtonText(ButtonWidget button)
 	{
 		QuantumHackClient wurst = QuantumHackClient.INSTANCE;
-		String text = (wurst.isEnabled() ? "Disable" : "Enable") + " QuantumHack";
+		String text =
+			(wurst.isEnabled() ? "Disable" : "Enable") + " QuantumHack";
 		button.setMessage(Text.literal(text));
 	}
 }

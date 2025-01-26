@@ -174,8 +174,9 @@ public final class NavigatorFeatureScreen extends NavigatorScreen
 					public void press()
 					{
 						// add keybind
-						QuantumHackClient.MC.setScreen(new NavigatorNewKeybindScreen(
-							possibleKeybinds, NavigatorFeatureScreen.this));
+						QuantumHackClient.MC.setScreen(
+							new NavigatorNewKeybindScreen(possibleKeybinds,
+								NavigatorFeatureScreen.this));
 					}
 				};
 			buttonDatas.add(addKeybindButton);

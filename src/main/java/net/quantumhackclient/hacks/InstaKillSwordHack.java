@@ -7,19 +7,12 @@
  */
 package net.quantumhackclient.hacks;
 
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtList;
 import net.minecraft.network.packet.c2s.play.CreativeInventoryActionC2SPacket;
-import net.minecraft.text.Text;
 import net.quantumhackclient.Category;
 import net.quantumhackclient.SearchTags;
 import net.quantumhackclient.hack.Hack;
-import net.quantumhackclient.settings.EnumSetting;
 import net.quantumhackclient.util.ChatUtils;
 import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registries;
@@ -27,7 +20,7 @@ import net.minecraft.registry.Registries;
 @SearchTags({"instakill sword potion", "InstaKillSword"})
 public final class InstaKillSwordHack extends Hack
 {
-
+	
 	public InstaKillSwordHack()
 	{
 		super("InstaKillSword");
@@ -46,9 +39,10 @@ public final class InstaKillSwordHack extends Hack
 		}
 		
 		// generate sword
-		ItemStack stack = new ItemStack(Registries.ITEM.get(new Identifier("minecraft:diamond_sword")));
+		ItemStack stack = new ItemStack(
+			Registries.ITEM.get(new Identifier("minecraft:diamond_sword")));
 		stack.addEnchantment(Enchantments.SHARPNESS, 127);
-
+		
 		// give sword
 		if(placeStackInHotbar(stack))
 			ChatUtils.message("Insta killing sword created.");

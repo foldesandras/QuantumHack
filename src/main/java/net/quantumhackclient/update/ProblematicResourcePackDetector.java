@@ -32,18 +32,20 @@ public final class ProblematicResourcePackDetector implements UpdateListener
 		if(running)
 			return;
 		
-		QuantumHackClient.INSTANCE.getEventManager().add(UpdateListener.class, this);
+		QuantumHackClient.INSTANCE.getEventManager().add(UpdateListener.class,
+			this);
 		running = true;
 	}
 	
 	@Override
 	public void onUpdate()
 	{
-		if(QuantumHackClient.INSTANCE.isEnabled() && isTwinklingStarsInstalled())
+		if(QuantumHackClient.INSTANCE.isEnabled()
+			&& isTwinklingStarsInstalled())
 			ChatUtils.warning(WARNING_MESSAGE);
 		
-		QuantumHackClient.INSTANCE.getEventManager().remove(UpdateListener.class,
-			this);
+		QuantumHackClient.INSTANCE.getEventManager()
+			.remove(UpdateListener.class, this);
 		running = false;
 	}
 	

@@ -35,7 +35,8 @@ public abstract class AbstractSignEditScreenMixin extends Screen
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void onInit(CallbackInfo ci)
 	{
-		AutoSignHack autoSignHack = QuantumHackClient.INSTANCE.getHax().autoSignHack;
+		AutoSignHack autoSignHack =
+			QuantumHackClient.INSTANCE.getHax().autoSignHack;
 		
 		String[] autoSignText = autoSignHack.getSignText();
 		if(autoSignText == null)

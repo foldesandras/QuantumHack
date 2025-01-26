@@ -37,8 +37,8 @@ public abstract class GenericContainerScreenMixin
 	private int mode;
 	
 	public GenericContainerScreenMixin(QuantumHackClient wurst,
-                                       GenericContainerScreenHandler container,
-                                       PlayerInventory playerInventory, Text name)
+		GenericContainerScreenHandler container,
+		PlayerInventory playerInventory, Text name)
 	{
 		super(container, playerInventory, name);
 	}

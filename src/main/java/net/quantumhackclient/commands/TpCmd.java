@@ -42,7 +42,8 @@ public final class TpCmd extends Command
 	{
 		BlockPos pos = argsToPos(args);
 		
-		if(disableFreecam.isChecked() && QUANTUM_HACK.getHax().freecamHack.isEnabled())
+		if(disableFreecam.isChecked()
+			&& QUANTUM_HACK.getHax().freecamHack.isEnabled())
 			QUANTUM_HACK.getHax().freecamHack.setEnabled(false);
 		
 		MC.player.setPosition(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);

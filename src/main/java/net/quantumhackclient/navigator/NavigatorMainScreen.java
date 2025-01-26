@@ -244,8 +244,8 @@ public final class NavigatorMainScreen extends NavigatorScreen
 		if(!clickTimerRunning)
 		{
 			RenderSystem.setShaderColor(1, 1, 1, 1);
-			context.drawTextWithShadow(QuantumHackClient.MC.textRenderer, "Search: ",
-				middleX - 150, 32, txtColor);
+			context.drawTextWithShadow(QuantumHackClient.MC.textRenderer,
+				"Search: ", middleX - 150, 32, txtColor);
 			searchBar.render(context, mouseX, mouseY, partialTicks);
 			GL11.glEnable(GL11.GL_BLEND);
 		}

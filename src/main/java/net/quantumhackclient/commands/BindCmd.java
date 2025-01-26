@@ -23,6 +23,7 @@ public final class BindCmd extends Command
 	@Override
 	public void call(String[] args) throws CmdException
 	{
-		QUANTUM_HACK.getCmdProcessor().process("binds add " + String.join(" ", args));
+		QUANTUM_HACK.getCmdProcessor()
+			.process("binds add " + String.join(" ", args));
 	}
 }

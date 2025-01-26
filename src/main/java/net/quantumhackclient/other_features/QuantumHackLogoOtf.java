@@ -33,7 +33,8 @@ public final class QuantumHackLogoOtf extends OtherFeature
 	
 	public QuantumHackLogoOtf()
 	{
-		super("QuantumHackLogo", "Shows the QuantumHack logo and version on the screen.");
+		super("QuantumHackLogo",
+			"Shows the QuantumHack logo and version on the screen.");
 		addSetting(bgColor);
 		addSetting(txtColor);
 		addSetting(visibility);

@@ -73,7 +73,8 @@ public final class TabGui implements KeyPressListener
 		width = 64;
 		for(Tab tab : tabs)
 		{
-			int tabWidth = QuantumHackClient.MC.textRenderer.getWidth(tab.name) + 10;
+			int tabWidth =
+				QuantumHackClient.MC.textRenderer.getWidth(tab.name) + 10;
 			if(tabWidth > width)
 				width = tabWidth;
 		}
@@ -159,8 +160,8 @@ public final class TabGui implements KeyPressListener
 			if(i == selected)
 				tabName = (tabOpened ? "<" : ">") + tabName;
 			
-			context.drawText(QuantumHackClient.MC.textRenderer, tabName, 2, textY,
-				txtColor, false);
+			context.drawText(QuantumHackClient.MC.textRenderer, tabName, 2,
+				textY, txtColor, false);
 			textY += 10;
 		}
 		GL11.glEnable(GL11.GL_BLEND);
@@ -322,9 +323,8 @@ public final class TabGui implements KeyPressListener
 			width = 64;
 			for(Feature feature : features)
 			{
-				int fWidth =
-					QuantumHackClient.MC.textRenderer.getWidth(feature.getName())
-						+ 10;
+				int fWidth = QuantumHackClient.MC.textRenderer
+					.getWidth(feature.getName()) + 10;
 				if(fWidth > width)
 					width = fWidth;
 			}

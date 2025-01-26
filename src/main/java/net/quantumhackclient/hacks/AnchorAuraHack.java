@@ -333,7 +333,8 @@ public final class AnchorAuraHack extends Hack implements UpdateListener
 					&& ((LivingEntity)e).getHealth() > 0)
 				.filter(e -> e != MC.player)
 				.filter(e -> !(e instanceof FakePlayerEntity))
-				.filter(e -> !QUANTUM_HACK.getFriends().contains(e.getEntityName()))
+				.filter(
+					e -> !QUANTUM_HACK.getFriends().contains(e.getEntityName()))
 				.filter(e -> MC.player.squaredDistanceTo(e) <= rangeSq);
 		
 		stream = entityFilters.applyTo(stream);
@@ -394,7 +395,8 @@ public final class AnchorAuraHack extends Hack implements UpdateListener
 	
 	private boolean isSneaking()
 	{
-		return MC.player.isSneaking() || QUANTUM_HACK.getHax().sneakHack.isEnabled();
+		return MC.player.isSneaking()
+			|| QUANTUM_HACK.getHax().sneakHack.isEnabled();
 	}
 	
 	private enum TakeItemsFrom

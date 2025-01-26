@@ -44,7 +44,8 @@ public class ShallowWaterWarningCheckbox extends CheckboxSetting
 			ChatUtils.message(
 				"You can't get any treasure items while fishing like this.");
 			
-			if(!QuantumHackClient.INSTANCE.getHax().openWaterEspHack.isEnabled())
+			if(!QuantumHackClient.INSTANCE.getHax().openWaterEspHack
+				.isEnabled())
 				ChatUtils.message("Use OpenWaterESP to find open water.");
 			
 			hasAlreadyWarned = true;

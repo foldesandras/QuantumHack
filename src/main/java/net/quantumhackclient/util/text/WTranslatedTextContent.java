@@ -28,7 +28,8 @@ public final class WTranslatedTextContent implements WTextContent
 	
 	private void update()
 	{
-		QuantumHackTranslator translator = QuantumHackClient.INSTANCE.getTranslator();
+		QuantumHackTranslator translator =
+			QuantumHackClient.INSTANCE.getTranslator();
 		Map<String, String> language = translator.getWurstsCurrentLanguage();
 		if(language == lastLanguage)
 			return;
