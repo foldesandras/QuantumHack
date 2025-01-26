@@ -1,8 +1,8 @@
-# QuantumClient (Fork of Wurst v7)
+# QuantumHack (Fork of Wurst v7)
 
 ## Downloads (for users)
 
-[Download QuantumClient](https://foldesandras.github.io/quantumhack)
+[Download QuantumHack](https://foldesandras.github.io/quantumhack)
 
 ## Setup (for developers)
 
@@ -24,7 +24,7 @@ Pull requests are welcome! However, please make sure to review the [contributing
 
 To submit translations, the preferred method is to create a Pull Request on GitHub.
 
-To enable in-game translations, go to `QuantumClient Options > Translations > ON`.
+To enable in-game translations, go to `QuantumHack Options > Translations > ON`.
 
 Please note: Names of features (such as hacks, commands, etc.) should remain in English to ensure consistency across different language settings. This also allows for easier communication between users of different languages.
 
@@ -37,4 +37,4 @@ This code is licensed under the GNU General Public License v3. **Please note tha
 ---
 
 ### Important note for users:
-While tools like QuantumClient (or other modded clients) may provide additional functionality, **please ensure you only use them in single-player or on servers where cheats and mods are allowed**. On servers where cheating is prohibited, using such clients may violate the rules and result in bans or penalties. Always respect the community rules and the fair play environment of multiplayer servers.
+While tools like QuantumHack (or other modded clients) may provide additional functionality, **please ensure you only use them in single-player or on servers where cheats and mods are allowed**. On servers where cheating is prohibited, using such clients may violate the rules and result in bans or penalties. Always respect the community rules and the fair play environment of multiplayer servers.
