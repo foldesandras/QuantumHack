@@ -115,12 +115,8 @@ public class QuantumHackOptionsScreen extends Screen
 	private void addLinkButtons()
 	{
 		OperatingSystem os = Util.getOperatingSystem();
-		
-		new QuantumHackOptionsButton(54, 24, () -> "Official Website",
-			"§n§lexample.com", b -> os.open(
-				"https://example.com"));
 
-		new QuantumHackOptionsButton(54, 48, () -> "Github",
+		new QuantumHackOptionsButton(54, 24, () -> "Github",
 				"§n§lgithub.com/foldesandras/QuantumHack", b -> os.open(
 				"https://github.com/foldesandras/QuantumHack"));
 	}

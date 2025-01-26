@@ -65,7 +65,7 @@ public abstract class StatsScreenMixin extends Screen implements StatsListener
 	private void updateWurstButtonText(ButtonWidget button)
 	{
 		QuantumHackClient wurst = QuantumHackClient.INSTANCE;
-		String text = (wurst.isEnabled() ? "Disable" : "Enable") + " Wurst";
+		String text = (wurst.isEnabled() ? "Disable" : "Enable") + " QuantumHack";
 		button.setMessage(Text.literal(text));
 	}
 }

@@ -90,7 +90,7 @@ public final class HackList implements UpdateListener
 	public final DerpHack derpHack = new DerpHack();
 	public final DolphinHack dolphinHack = new DolphinHack();
 	public final ExcavatorHack excavatorHack = new ExcavatorHack();
-	public final ExtraElytraHack extraElytraHack = new ExtraElytraHack();
+	public final ElytraFlyHack extraElytraHack = new ElytraFlyHack();
 	public final FancyChatHack fancyChatHack = new FancyChatHack();
 	public final FastBreakHack fastBreakHack = new FastBreakHack();
 	public final FastLadderHack fastLadderHack = new FastLadderHack();
@@ -186,7 +186,6 @@ public final class HackList implements UpdateListener
 	public final TunnellerHack tunnellerHack = new TunnellerHack();
 	public final VeinMinerHack veinMinerHack = new VeinMinerHack();
 	public final XRayHack xRayHack = new XRayHack();
-
 	public final InstaKillSwordHack instaKillSwordHack = new InstaKillSwordHack();
 	
 	private final TreeMap<String, Hack> hax =

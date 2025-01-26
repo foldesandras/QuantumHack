@@ -94,7 +94,7 @@
   "description.quantumhack.hack.derp": "Randomly moves your head around.\nOnly visible to other players.",
   "description.quantumhack.hack.dolphin": "Makes you bob up in water automatically.\n(just like a dolphin)",
   "description.quantumhack.hack.excavator": "Automatically breaks all blocks in the selected area.",
-  "description.quantumhack.hack.extraelytra": "Makes the Elytra easier to use.",
+  "description.quantumhack.hack.elytrafly": "Makes the Elytra easier to use.",
   "description.quantumhack.hack.fancychat": "Replaces ASCII characters in sent chat messages with fancier unicode characters. Can be used to bypass curse word filters on some servers.\nDoes not work on servers that block unicode characters.",
   "description.quantumhack.hack.fastbreak": "Allows you to break blocks faster.\nTip: This works with Nuker.",
   "description.quantumhack.hack.fastladder": "Allows you to climb up ladders faster.",

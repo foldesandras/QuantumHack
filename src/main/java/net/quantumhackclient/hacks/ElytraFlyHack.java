@@ -20,8 +20,8 @@ import net.quantumhackclient.events.UpdateListener;
 import net.quantumhackclient.hack.Hack;
 import net.quantumhackclient.settings.CheckboxSetting;
 
-@SearchTags({"EasyElytra", "extra elytra", "easy elytra"})
-public final class ExtraElytraHack extends Hack implements UpdateListener
+@SearchTags({"EasyElytra", "elytra fly", "easy elytra", "ElytraFly", "EFly"})
+public final class ElytraFlyHack extends Hack implements UpdateListener
 {
 	private final CheckboxSetting instantFly = new CheckboxSetting(
 		"Instant fly", "Jump to fly, no weird double-jump needed!", true);
@@ -42,9 +42,9 @@ public final class ExtraElytraHack extends Hack implements UpdateListener
 	
 	private int jumpTimer;
 	
-	public ExtraElytraHack()
+	public ElytraFlyHack()
 	{
-		super("ExtraElytra");
+		super("ElytraFly");
 		setCategory(Category.MOVEMENT);
 		addSetting(instantFly);
 		addSetting(speedCtrl);

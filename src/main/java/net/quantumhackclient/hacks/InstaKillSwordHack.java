@@ -47,7 +47,7 @@ public final class InstaKillSwordHack extends Hack
 		
 		// generate sword
 		ItemStack stack = new ItemStack(Registries.ITEM.get(new Identifier("minecraft:diamond_sword")));
-		stack.addEnchantment(Enchantments.SHARPNESS, 254);
+		stack.addEnchantment(Enchantments.SHARPNESS, 127);
 
 		// give sword
 		if(placeStackInHotbar(stack))

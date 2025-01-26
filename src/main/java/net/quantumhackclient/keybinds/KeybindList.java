@@ -118,14 +118,12 @@ public final class KeybindList
 	{
 		Set<Keybind> set = new LinkedHashSet<>();
 		addKB(set, "g", "flight");
-		addKB(set, "semicolon", "speednuker");
 		addKB(set, "j", "jesus");
 		addKB(set, "k", "multiaura");
 		addKB(set, "r", "killaura");
 		addKB(set, "right.shift", "clickgui");
 		addKB(set, "b", "freecam");
 		addKB(set, "x", "x-ray");
-		addKB(set, "y", "sneak");
 		return Collections.unmodifiableSet(set);
 	}
 	

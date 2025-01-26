@@ -173,7 +173,7 @@ public enum QuantumHackClient
 	private Path createWurstFolder()
 	{
 		Path dotMinecraftFolder = MC.runDirectory.toPath().normalize();
-		Path wurstFolder = dotMinecraftFolder.resolve("wurst");
+		Path wurstFolder = dotMinecraftFolder.resolve("quantumhack");
 		
 		try
 		{

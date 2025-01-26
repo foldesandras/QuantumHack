@@ -31,7 +31,7 @@ import net.minecraft.util.Language;
 
 public class QuantumHackTranslator implements SynchronousResourceReloader
 {
-	private final QuantumHackClient wurst = QuantumHackClient.INSTANCE;
+	private final QuantumHackClient quantumHack = QuantumHackClient.INSTANCE;
 	private TranslationStorage mcEnglish;
 	
 	private Map<String, String> currentLangStrings = Map.of();
@@ -141,7 +141,7 @@ public class QuantumHackTranslator implements SynchronousResourceReloader
 	
 	public boolean isForcedEnglish()
 	{
-		return wurst.getOtfs().translationsOtf.getForceEnglish().isChecked();
+		return quantumHack.getOtfs().translationsOtf.getForceEnglish().isChecked();
 	}
 	
 	/**
@@ -185,7 +185,7 @@ public class QuantumHackTranslator implements SynchronousResourceReloader
 		for(String langCode : langCodes)
 		{
 			String langFilePath = "translations/" + langCode + ".json";
-			Identifier langId = Identifier.of("wurst", langFilePath);
+			Identifier langId = Identifier.of("quantumhack", langFilePath);
 			
 			for(Resource resource : manager.getAllResources(langId))
 				try(InputStream stream = resource.getInputStream())
