@@ -55,17 +55,33 @@ public final class QuantumHackUpdater implements UpdateListener
 			
 			for(WsonObject release : wson.getAllObjects())
 			{
+				// Ha a verzió előzetes és a currentVersion nem előzetes, akkor
+				// kihagyjuk
 				if(!currentVersion.isPreRelease()
 					&& release.getBoolean("prerelease"))
+				{
 					continue;
+				}
 				
 				String tagName = release.getString("tag_name");
-				latestVersion = new Version(tagName.substring(1));
-				break;
+				Version releaseVersion = new Version(tagName.substring(1)); // Levágjuk
+																			// a
+																			// "v"
+																			// előtagot
+				
+				// Ha nincs még legfrissebb verzió vagy a találat nagyobb, mint
+				// az eddigi, frissítjük
+				if(latestVersion == null
+					|| releaseVersion.isHigherThan(latestVersion))
+				{
+					latestVersion = releaseVersion;
+				}
 			}
 			
 			if(latestVersion == null)
+			{
 				throw new NullPointerException("Latest version is missing!");
+			}
 			
 			System.out.println("[Updater] Current version: " + currentVersion);
 			System.out.println("[Updater] Latest version: " + latestVersion);

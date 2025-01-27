@@ -205,7 +205,7 @@
   "description.quantumhack.setting.remoteview.filter_armor_stands": "Won't view armor stands.",
   "description.quantumhack.hack.restock": "Automatically restocks your hand with the selected items from your inventory. Works better with FastPlace.",
   "description.quantumhack.hack.safewalk": "Prevents you from falling off edges.",
-  "description.quantumhack.hack.scaffoldwalk": "Automatically places blocks below your feet.",
+  "description.quantumhack.hack.scaffold": "Automatically places blocks below your feet.",
   "description.quantumhack.hack.search": "Helps you to find specific blocks by highlighting them in rainbow color.",
   "description.quantumhack.hack.skinderp": "Randomly toggles parts of your skin.",
   "description.quantumhack.hack.sneak": "Makes you sneak automatically.",
