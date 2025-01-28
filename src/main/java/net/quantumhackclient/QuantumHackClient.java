@@ -22,7 +22,6 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.quantumhackclient.altmanager.AltManager;
 import net.quantumhackclient.altmanager.Encryption;
-import net.quantumhackclient.analytics.WurstAnalytics;
 import net.quantumhackclient.clickgui.ClickGui;
 import net.quantumhackclient.command.CmdList;
 import net.quantumhackclient.command.CmdProcessor;
@@ -58,8 +57,6 @@ public enum QuantumHackClient
 	
 	public static final String VERSION = "1.0.2";
 	public static final String MC_VERSION = "1.20.1";
-	
-	private WurstAnalytics analytics;
 	private EventManager eventManager;
 	private AltManager altManager;
 	private HackList hax;
@@ -93,7 +90,6 @@ public enum QuantumHackClient
 		String trackingID = "UA-52838431-5";
 		String hostname = "client.wurstclient.net";
 		Path analyticsFile = wurstFolder.resolve("analytics.json");
-		analytics = new WurstAnalytics(trackingID, hostname, analyticsFile);
 		
 		eventManager = new EventManager(this);
 		
@@ -154,9 +150,6 @@ public enum QuantumHackClient
 			System.out.println("[Wurst] Applying fixes for Sinytra Connector");
 			HudRenderCallback.EVENT.register(this::onHudRender);
 		}
-		
-		analytics.trackPageView("/mc" + MC_VERSION + "/v" + VERSION,
-			"Wurst " + VERSION + " MC" + MC_VERSION);
 	}
 	
 	// Alternative HUD rendering when using Sinytra Connector
@@ -191,11 +184,6 @@ public enum QuantumHackClient
 	public String translate(String key, Object... args)
 	{
 		return translator.translate(key, args);
-	}
-	
-	public WurstAnalytics getAnalytics()
-	{
-		return analytics;
 	}
 	
 	public EventManager getEventManager()

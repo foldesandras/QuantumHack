@@ -21,7 +21,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Util;
 import net.minecraft.util.Util.OperatingSystem;
 import net.quantumhackclient.QuantumHackClient;
-import net.quantumhackclient.analytics.WurstAnalytics;
 import net.quantumhackclient.commands.FriendsCmd;
 import net.quantumhackclient.hacks.XRayHack;
 import net.quantumhackclient.other_features.VanillaSpoofOtf;
@@ -53,13 +52,12 @@ public class QuantumHackOptionsScreen extends Screen
 	
 	private void addSettingButtons()
 	{
-		QuantumHackClient wurst = QuantumHackClient.INSTANCE;
-		FriendsCmd friendsCmd = wurst.getCmds().friendsCmd;
+		QuantumHackClient quanutmHack = QuantumHackClient.INSTANCE;
+		FriendsCmd friendsCmd = quanutmHack.getCmds().friendsCmd;
 		CheckboxSetting middleClickFriends = friendsCmd.getMiddleClickFriends();
-		WurstAnalytics analytics = wurst.getAnalytics();
-		VanillaSpoofOtf vanillaSpoofOtf = wurst.getOtfs().vanillaSpoofOtf;
+		VanillaSpoofOtf vanillaSpoofOtf = quanutmHack.getOtfs().vanillaSpoofOtf;
 		CheckboxSetting forceEnglish =
-			wurst.getOtfs().translationsOtf.getForceEnglish();
+			quanutmHack.getOtfs().translationsOtf.getForceEnglish();
 		
 		new QuantumHackOptionsButton(-154, 24,
 			() -> "Click Friends: "
@@ -67,17 +65,6 @@ public class QuantumHackOptionsScreen extends Screen
 			middleClickFriends.getWrappedDescription(200),
 			b -> middleClickFriends
 				.setChecked(!middleClickFriends.isChecked()));
-		
-		new QuantumHackOptionsButton(-154, 48,
-			() -> "Count Users: " + (analytics.isEnabled() ? "ON" : "OFF"),
-			"Counts how many people are using Wurst and which versions are the"
-				+ " most popular. We use this data to decide when to stop"
-				+ " supporting old Minecraft versions.\n\n"
-				+ "We use a random ID to tell users apart so that this data can"
-				+ " never be linked to your Minecraft account. The random ID is"
-				+ " changed every 3 days to make extra sure that you remain"
-				+ " anonymous.",
-			b -> analytics.setEnabled(!analytics.isEnabled()));
 		
 		new QuantumHackOptionsButton(-154, 72,
 			() -> "Spoof Vanilla: "
