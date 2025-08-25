@@ -1,8 +1,8 @@
-# QuantumHack (Fork of Wurst v7)
+# Qweak (Fork of Wurst v7)
 
 ## Downloads (for users)
 
-[Download QuantumHack](https://foldesandras.github.io/quantumhack)
+[Download Qweak](https://foldesandras.github.io/quantumhack)
 
 ## Setup (for developers)
 
