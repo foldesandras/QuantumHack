@@ -6,7 +6,7 @@ Qweak is a custom Minecraft client built specifically for version 1.20.1. It is 
 
 ## Is Qweak free to use?
 
-Yes, QuantumHack is completely free to use.
+Yes, Qweak is completely free to use.
 
 ## How do I install Qweak?
 
