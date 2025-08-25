@@ -20,6 +20,7 @@ import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.text.Text;
 import net.minecraft.util.Util;
 import net.minecraft.util.Util.OperatingSystem;
+import net.quantumhackclient.Branding;
 import net.quantumhackclient.QuantumHackClient;
 import net.quantumhackclient.commands.FriendsCmd;
 import net.quantumhackclient.hacks.XRayHack;
@@ -52,12 +53,12 @@ public class QuantumHackOptionsScreen extends Screen
 	
 	private void addSettingButtons()
 	{
-		QuantumHackClient quanutmHack = QuantumHackClient.INSTANCE;
-		FriendsCmd friendsCmd = quanutmHack.getCmds().friendsCmd;
+		QuantumHackClient quantumHack = QuantumHackClient.INSTANCE;
+		FriendsCmd friendsCmd = quantumHack.getCmds().friendsCmd;
 		CheckboxSetting middleClickFriends = friendsCmd.getMiddleClickFriends();
-		VanillaSpoofOtf vanillaSpoofOtf = quanutmHack.getOtfs().vanillaSpoofOtf;
+		VanillaSpoofOtf vanillaSpoofOtf = quantumHack.getOtfs().vanillaSpoofOtf;
 		CheckboxSetting forceEnglish =
-			quanutmHack.getOtfs().translationsOtf.getForceEnglish();
+			quantumHack.getOtfs().translationsOtf.getForceEnglish();
 		
 		new QuantumHackOptionsButton(-154, 24,
 			() -> "Click Friends: "
@@ -74,7 +75,8 @@ public class QuantumHackOptionsScreen extends Screen
 		
 		new QuantumHackOptionsButton(-154, 96,
 			() -> "Translations: " + (!forceEnglish.isChecked() ? "ON" : "OFF"),
-			"Allows text in Wurst to be displayed in other languages than"
+			"Allows text in " + Branding.BRANDING_NAME
+				+ " to be displayed in other languages than"
 				+ " English. It will use the same language that Minecraft is"
 				+ " set to.\n\n" + "This is an experimental feature!",
 			b -> forceEnglish.setChecked(!forceEnglish.isChecked()));
@@ -108,8 +110,8 @@ public class QuantumHackOptionsScreen extends Screen
 			b -> os.open("https://github.com/foldesandras/QuantumHack"));
 		
 		new QuantumHackOptionsButton(54, 48, () -> "Official Website",
-			"§n§lfoldesandras.github.io/QuantumHack",
-			b -> os.open("https://foldesandras.github.io/QuantumHack"));
+			"§n§lfoldesandras.github.io/Qweak",
+			b -> os.open("https://foldesandras.github.io/Qweak"));
 	}
 	
 	@Override
@@ -135,8 +137,8 @@ public class QuantumHackOptionsScreen extends Screen
 		int y1 = 40;
 		int y2 = height / 4 + 24 - 28;
 		
-		context.drawCenteredTextWithShadow(tr, "Wurst Options", middleX, y1,
-			0xffffff);
+		context.drawCenteredTextWithShadow(tr,
+			Branding.BRANDING_NAME + " Options", middleX, y1, 0xffffff);
 		
 		context.drawCenteredTextWithShadow(tr, "Settings", middleX - 104, y2,
 			0xcccccc);

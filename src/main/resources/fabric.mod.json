@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "id": "quantumhack",
+  "id": "qweak",
   "version": "${version}",
-  "name": "QuantumHack Client",
-  "description": "Quantum Quantum Quantum (Hack)!",
+  "name": "Qweak Client",
+  "description": "Tweak Tweak Tweak (Qweak)!",
   "authors": [
-    "Alexander01998"
+    "foldesandras"
   ],
   "contact": {
-    "homepage": "https://www.wurstclient.net/?utm_source=Wurst+Client&utm_medium=ModMenu&utm_content=Website",
+    "homepage": "https://foldesandras.github.io/Qweak",
     "issues": "https://www.wurstclient.net/wurst7issues/",
     "sources": "https://www.wurstclient.net/wurst7sources/"
   },
@@ -38,14 +38,5 @@
     "wi-zoom": "*",
     "vulkanmod": "*",
     "sodium": ">=0.6.0-beta.1"
-  },
-  "custom": {
-    "modmenu": {
-      "links": {
-        "Wiki": "https://wurst.wiki/?utm_source=Wurst+Client&utm_medium=ModMenu&utm_content=Wiki",
-        "Forum": "https://wurstforum.net/?utm_source=Wurst+Client&utm_medium=ModMenu&utm_content=Forum",
-        "Donate": "https://www.wurstclient.net/donate/?utm_source=Wurst+Client&utm_medium=ModMenu&utm_content=Donate"
-      }
-    }
   }
 }

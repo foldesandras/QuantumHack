@@ -9,6 +9,7 @@ package net.quantumhackclient.mixin;
 
 import java.util.List;
 
+import net.quantumhackclient.Branding;
 import org.lwjgl.opengl.GL11;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -112,7 +113,8 @@ public abstract class GameMenuScreenMixin extends Screen
 		}
 		
 		// Add the Wurst Options button
-		MutableText buttonText = Text.literal("QuantumHack Options");
+		MutableText buttonText =
+			Text.literal(Branding.BRANDING_NAME + " Options");
 		quantumHackOptionsButton = ButtonWidget
 			.builder(buttonText, b -> openWurstOptions())
 			.dimensions(buttonX, buttonY, buttonWidth, buttonHeight).build();

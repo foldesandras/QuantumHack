@@ -85,15 +85,16 @@ public final class AltManagerScreen extends Screen
 	public void init()
 	{
 		listGui = new ListGui(client, this, altManager.getList());
-		QuantumHackClient wurst = QuantumHackClient.INSTANCE;
+		QuantumHackClient quantumhack = QuantumHackClient.INSTANCE;
 		
 		Exception folderException = altManager.getFolderException();
 		if(folderException != null && shouldAsk)
 		{
-			Text title = Text.literal(
-				wurst.translate("gui.wurst.altmanager.folder_error.title"));
-			Text message = Text.literal(wurst.translate(
-				"gui.wurst.altmanager.folder_error.message", folderException));
+			Text title = Text.literal(quantumhack
+				.translate("gui.quantumhack.altmanager.folder_error.title"));
+			Text message = Text.literal(quantumhack.translate(
+				"gui.quantumhack.altmanager.folder_error.message",
+				folderException));
 			Text buttonText = Text.translatable("gui.done");
 			
 			// This just sets shouldAsk to false and closes the message.
@@ -105,10 +106,10 @@ public final class AltManagerScreen extends Screen
 			
 		}else if(altManager.getList().isEmpty() && shouldAsk)
 		{
-			Text title = Text
-				.literal(wurst.translate("gui.wurst.altmanager.empty.title"));
-			Text message = Text
-				.literal(wurst.translate("gui.wurst.altmanager.empty.message"));
+			Text title = Text.literal(quantumhack
+				.translate("gui.quantumhack.altmanager.empty.title"));
+			Text message = Text.literal(quantumhack
+				.translate("gui.quantumhack.altmanager.empty.message"));
 			BooleanConsumer callback = this::confirmGenerate;
 			
 			ConfirmScreen screen = new ConfirmScreen(callback, title, message);

@@ -55,7 +55,7 @@ public enum QuantumHackClient
 	public static MinecraftClient MC;
 	public static IMinecraftClient IMC;
 	
-	public static final String VERSION = "1.0.2";
+	public static final String VERSION = "2.0.0";
 	public static final String MC_VERSION = "1.20.1";
 	private EventManager eventManager;
 	private AltManager altManager;
@@ -81,7 +81,7 @@ public enum QuantumHackClient
 	
 	public void initialize()
 	{
-		System.out.println("Starting Wurst Client...");
+		System.out.println("Starting " + Branding.BRANDING_NAME + "...");
 		
 		MC = MinecraftClient.getInstance();
 		IMC = (IMinecraftClient)MC;
@@ -175,7 +175,7 @@ public enum QuantumHackClient
 		}catch(IOException e)
 		{
 			throw new RuntimeException(
-				"Couldn't create .minecraft/wurst folder.", e);
+				"Couldn't create .minecraft/quantumhack folder.", e);
 		}
 		
 		return wurstFolder;

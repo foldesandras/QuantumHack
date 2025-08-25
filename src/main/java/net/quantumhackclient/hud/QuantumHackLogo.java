@@ -7,6 +7,7 @@
  */
 package net.quantumhackclient.hud;
 
+import net.quantumhackclient.Branding;
 import org.joml.Matrix4f;
 import org.lwjgl.opengl.GL11;
 
@@ -33,7 +34,7 @@ public final class QuantumHackLogo
 		if(!otf.isVisible())
 			return;
 		
-		String display = "QuantumHack " + getVersionString();
+		String display = Branding.BRANDING_NAME + " " + getVersionString();
 		TextRenderer tr = QuantumHackClient.MC.textRenderer;
 		
 		// draw version background

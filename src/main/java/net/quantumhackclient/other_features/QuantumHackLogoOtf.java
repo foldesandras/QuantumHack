@@ -10,6 +10,7 @@ package net.quantumhackclient.other_features;
 import java.awt.Color;
 import java.util.function.BooleanSupplier;
 
+import net.quantumhackclient.Branding;
 import net.quantumhackclient.DontBlock;
 import net.quantumhackclient.SearchTags;
 import net.quantumhackclient.other_feature.OtherFeature;
@@ -33,8 +34,8 @@ public final class QuantumHackLogoOtf extends OtherFeature
 	
 	public QuantumHackLogoOtf()
 	{
-		super("QuantumHackLogo",
-			"Shows the QuantumHack logo and version on the screen.");
+		super(Branding.BRANDING_NAME + "Logo", "Shows the "
+			+ Branding.BRANDING_NAME + " logo and version on the screen.");
 		addSetting(bgColor);
 		addSetting(txtColor);
 		addSetting(visibility);

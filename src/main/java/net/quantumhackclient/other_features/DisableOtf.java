@@ -7,6 +7,7 @@
  */
 package net.quantumhackclient.other_features;
 
+import net.quantumhackclient.Branding;
 import net.quantumhackclient.DontBlock;
 import net.quantumhackclient.SearchTags;
 import net.quantumhackclient.other_feature.OtherFeature;
@@ -17,17 +18,22 @@ import net.quantumhackclient.settings.CheckboxSetting;
 @DontBlock
 public final class DisableOtf extends OtherFeature
 {
-	private final CheckboxSetting hideEnableButton = new CheckboxSetting(
-		"Hide enable button",
-		"Removes the \"Enable Wurst\" button as soon as you close the Statistics screen."
-			+ " You will have to restart the game to re-enable Wurst.",
-		false);
+	private final CheckboxSetting hideEnableButton =
+		new CheckboxSetting("Hide enable button",
+			"Removes the \"Enable " + Branding.BRANDING_NAME
+				+ "\" button as soon as you close the Statistics screen."
+				+ " You will have to restart the game to re-enable "
+				+ Branding.BRANDING_NAME + ".",
+			false);
 	
 	public DisableOtf()
 	{
-		super("Disable Wurst",
-			"To disable Wurst, go to the Statistics screen and press the \"Disable Wurst\" button.\n"
-				+ "It will turn into an \"Enable Wurst\" button once pressed.");
+		super("Disable " + Branding.BRANDING_NAME,
+			"To disable " + Branding.BRANDING_NAME
+				+ ", go to the Statistics screen and press the \"Disable "
+				+ Branding.BRANDING_NAME + "\" button.\n"
+				+ "It will turn into an \"Enable " + Branding.BRANDING_NAME
+				+ "\" button once pressed.");
 		addSetting(hideEnableButton);
 	}
 	
